@@ -1,18 +1,18 @@
 import React from 'react';
 
 import './App.css';
-import Bendera from './Bendera';
-import Flag from './Bendera';
+import Bendera from './api/Bendera';
+import Flag from './api/Bendera';
 import { useEffect, useState } from "react";
-import {AvgAge} from './Calc';
-import { AvgMembership } from './Calc';
+import {AvgAge} from './Calculation/Calc';
+import { AvgMembership } from './Calculation/Calc';
 
 
 function App() {
   const [users, setUsers] = useState<any[]>([]);
   const [ageAvg, setAvgAge] = useState<number>(0);
   const [memberAvg, setAvgMember] = useState<number>(0);
-  const resultsCount = 25;
+  const resultsCount = 20;
 
   useEffect(() => {
     fetch(`https://randomuser.me/api/?results=${resultsCount}`)

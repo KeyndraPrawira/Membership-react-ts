@@ -19,7 +19,7 @@ export function AvgMembership(users: any[]): number {
     const regDate = new Date(user.registered.date);
    
 
-   //hitung perbedaan tahun, getFullYear = dapatkan data lamatahun
+   //hitung perbedaan tahun, getFullYear = dapatkan data lama tahun
    const years = now.getFullYear()  - regDate.getFullYear();
 
    //jika bulan dan tanggal kurang dari hari ini , kurangi satu tahun
